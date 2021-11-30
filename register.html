@@ -46,31 +46,30 @@
             <img src="images/loader.gif" alt="">
         </div>
 
-        <form action="/api/register" method = "POST">
+        <form action="">
 
             <div class="inputBox">
-                <input name=firstname type="text" placeholder="first name">
-                <input name=lastname type="text" placeholder="last name">
-                <input name=email type="email" placeholder="email">
-                <input name=num type="number" placeholder="number">
+                <input type="text" placeholder="first name">
+                <input type="text" placeholder="last name">
+                <input type="email" placeholder="email">
+                <input type="number" placeholder="number">
             </div>
-        
-            
-        
+
             <div class="inputBox">
-                      
+              
             </div>
-        
+
             <div class="inputBox">
-                <input input name=user type="text" placeholder="username">
-                <input input name=pass type="text" placeholder="password">
+                <input type="text" placeholder="username">
+                <input type="text" placeholder="password">
             </div>
-        
+
             <!-- <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea> -->
-        
-            <input type="submit" value="register" class="btn">
-        
-            </form>
+
+			<!-- SOURCE ATTRIBUTION: https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link (used to research how to have a button link to another page) -->
+            <input type="button" onclick="location.href='login.html'" value= "register" class="btn">
+
+        </form>
 
     </div>
 
@@ -88,15 +87,15 @@
 <!-- loader  -->
 <div class="loader-container">
     <img src="images/loader.gif" alt="">
-</div>
-
-
+</div>	
+	
 <!-- custom js file link  -->
 <script src="script.js"></script>
 
 
 </body>
 </html>
+
 
 
 
