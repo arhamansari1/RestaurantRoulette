@@ -45,11 +45,11 @@
             <img src="images/loader.gif" alt="">
         </div>
 
-        <form action="auth" method="POST">
+        <form action="">
 
             <div class="inputBox">
-                <input name = "username" type="text" placeholder="username">
-                <input name = "password" type="text" placeholder="password">
+                <input type="text" placeholder="username">
+                <input type="text" placeholder="password">
             </div>
 
             <div class="inputBox">
@@ -57,8 +57,10 @@
             </div>
 
             <!-- <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea> -->
-
-            <input type="submit" value="login" class="btn">
+			
+			
+            <!-- SOURCE ATTRIBUTION: https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link (used to research how to have a button link to another page) -->
+            <input type="button" onclick="location.href='roulette.html'" value="login" class="btn">
 
         </form>
 
@@ -86,6 +88,7 @@
 
 </body>
 </html>
+
 
 
 
