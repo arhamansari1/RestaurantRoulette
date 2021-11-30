@@ -1,3 +1,4 @@
+//packages I downloaded from sources while learning how to use Node.js
 const express = require('express');
 const morgan = require('morgan');
 const mysql = require('mysql');
@@ -8,9 +9,9 @@ const session = require('express-session');
 const path = require('path'); 
 //const route = require('./routes');
 
-
+//creates the app/server
 const app = express();
-
+//connects the server with the database
 var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -18,7 +19,7 @@ var connection = mysql.createConnection({
     database: "test_db",
     port: "3306"
 })
-
+//test connection at start
 connection.connect((err) => {
     if(err){
         throw err
@@ -26,7 +27,7 @@ connection.connect((err) => {
         console.log("connected!")
     }
 })
-
+//some queries I passed in order to make tables/test functions
 //connection.query('CREATE TABLE tabletest(id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, thing VARCHAR(255) NOT NULL)', (err, rows) =>{
 //    if(err){
 //        throw err
@@ -48,7 +49,7 @@ connection.connect((err) => {
 */
 
 
-
+//environment where the app is running (localhost:5000)
 const port = process.env.PORT || 5000;
 //new stuff from online to help with logging in
 app.use(session({
@@ -89,9 +90,10 @@ app.get('/home', function(request, response) {
 	response.end();
 });
 
-
+//loads js and css files, as well as images within a folder
 app.use(express.static(__dirname));
-
+//functions for the page, in order for it to run properly
+//as well as add functionality to each section
 app
     
     .get('', (req, res) =>{
@@ -127,8 +129,8 @@ app
         res.sendFile(__dirname+'/index.html')
         })
         
-    //.use(express.static('indexcopy.html'))
     
+    //post functions add information into the database
     .post('/api/user', (req, res) => {
     
         res.json(req.body);
