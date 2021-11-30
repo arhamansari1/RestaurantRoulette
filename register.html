@@ -46,29 +46,31 @@
             <img src="images/loader.gif" alt="">
         </div>
 
-        <form action="">
+        <form action="/api/register" method = "POST">
 
             <div class="inputBox">
-                <input type="text" placeholder="first name">
-                <input type="text" placeholder="last name">
-                <input type="email" placeholder="email">
-                <input type="number" placeholder="number">
+                <input name=firstname type="text" placeholder="first name">
+                <input name=lastname type="text" placeholder="last name">
+                <input name=email type="email" placeholder="email">
+                <input name=num type="number" placeholder="number">
             </div>
-
+        
+            
+        
             <div class="inputBox">
-              
+                      
             </div>
-
+        
             <div class="inputBox">
-                <input type="text" placeholder="username">
-                <input type="text" placeholder="password">
+                <input input name=user type="text" placeholder="username">
+                <input input name=pass type="text" placeholder="password">
             </div>
-
+        
             <!-- <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea> -->
-
-            <input type="submit" value= "register" class="btn">
-
-        </form>
+        
+            <input type="submit" value="register" class="btn">
+        
+            </form>
 
     </div>
 
@@ -95,7 +97,6 @@
 
 </body>
 </html>
-
 
 
 
