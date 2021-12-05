@@ -1,0 +1,19 @@
+CREATE DATABASE `test_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+CREATE TABLE `test_db`.`users` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `user_email` VARCHAR(99) NOT NULL,
+  `user_phone` VARCHAR(15) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE);
+
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (1,'Steven','Goss','stevengoss@mail.adelphi.edu','4107084633','sgcobra','pomona');
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (14,'hello ','world','i@am.so','123123123','happy r','ight now');
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (15,'test','test','test@test.com','1231231234','test','test');
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (16,'another','one','anoth@one.com','1234567899','yep','thats right');
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (17,'jane','doe','jd@mail.com','1231231234','jd99','xoxoxo');
+INSERT INTO `users` (`user_id`,`first_name`,`last_name`,`user_email`,`user_phone`,`username`,`password`) VALUES (18,'x','x','x@mail.com','1111111111','x','x');
