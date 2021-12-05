@@ -378,6 +378,68 @@ header .navbar a:hover{
 }
 /* login ends */
 
+
+/* submit starts */
+.submit .row{
+  padding:2rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  background:#fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  border-radius: .5rem;
+}
+
+.submit .row .image{
+  flex:1 1 30rem;
+}
+
+.submit .row .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.submit .row form{
+  flex:1 1 50rem;
+  padding:1rem;
+}
+
+.submit .row form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.submit .row form .inputBox input, .login .row form textarea{
+  padding:1rem;
+  margin:1rem 0;
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  width:49%;
+}
+
+.submit .row form textarea{
+  width:100%;
+  resize: none;
+  height:15rem;
+}
+
+.submit .row form .btn{
+  background:none;
+}
+
+.submit .row form .btn:hover{
+  background:var(--red);
+}
+
+/* submit ends */
+
+
 /* footer starts */
 .footer{
   background:#000;
@@ -609,3 +671,23 @@ header .navbar a:hover{
 }
 
 /* roulette wheel ends */
+
+
+.parent {
+  padding: 2em;
+  display: grid;
+  place-items: center;
+}
+
+
+article {
+  padding: 2em 0;
+  border-bottom: 2px dashed rgba(255,255,255, 0.2);
+}
+
+input{
+  padding: 0.7em 1em;
+  border-radius: 4px;
+  border: none;
+  width: 360px;
+}
