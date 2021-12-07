@@ -50,7 +50,7 @@
         <form action="">
             
             <div>
-            <h1> choice one </h1>
+            <h1 style="font-size:20px"> choice one </h1>
         <input list="restaurants" id="one" type="text" placeholder="Enter restaurant name...">
                 <datalist id="restaurants">
                     <option value="Big Bang Sushi & Poke"></option>
@@ -83,7 +83,7 @@
                 </div>
   
             <div>
-            <h1> choice two </h1>
+            <h1 style="font-size:20px"> choice two </h1>
 
             <input list="restaurants" id="two" type="text" placeholder="Enter restaurant name...">
             <datalist id="restaurants">
@@ -117,7 +117,7 @@
                 </div>
 
                 <div>
-                <h1> choice three </h1>
+                <h1 style="font-size:20px"> choice three </h1>
 
                 <input list="restaurants" id="three" type="text" placeholder="Enter restaurant name...">
                 <datalist id="restaurants">
@@ -151,6 +151,11 @@
     
                     </div>
 
+            <h1 style="font-size:20px"> enter room number </h1>       
+            <div class="inputBox">
+                <input type="number" placeholder="room number">
+            </div>
+
 			<!-- SOURCE ATTRIBUTION: https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link (used to research how to have a button link to another page) -->
             <input type="button" onclick="location.href='roulette.html'" value= "roulette now" class="btn">
 
@@ -163,10 +168,96 @@
 <!-- submit section ends -->
 
 
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 align="center", style="font-size:30px">Popular Options</h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/kiko.jpg" alt="">
+            <div class="content">
+                <h3>Kiko Ramen</h3>
+                <p></p>
+                <a href="https://www.kikoramen.com/" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/bottega.jpg" alt="">
+            <div class="content">
+                <h3>La Bottega Original</h3>
+                <p></p>
+                <a href="https://labottegagourmet.com/garden-city-south-ny" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/spankys.jpg" alt="">
+            <div class="content">
+                <h3>Spanky's Food Factory</h3>
+                <p></p>
+                <a href="https://spankysfoodfactory.com/" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/sushi.jpg" alt="">
+            <div class="content">
+                <h3>Big Bang Sushi & Poke</h3>
+                <p></p>
+                <a href="https://www.bigbangsushipoke.com/about" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/pizza.jpg" alt="">
+            <div class="content">
+                <h3>Grimaldi's Pizza</h3>
+                <p></p>
+                <a href="https://grimaldis.com/" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/healthy2.jpg" alt="">
+            <div class="content">
+                <h3>Guac Shop Mexican Grill</h3>
+                <p></p>
+                <a href="https://www.guacshopmexicangrill.com/contact-us" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/burger.jpg" alt="">
+            <div class="content">
+                <h3>The Burger Spot</h3>
+                <p></p>
+                <a href="http://www.theburgerspotonline.com/public_html/DevTBS/" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/healthy.jpg" alt="">
+            <div class="content">
+                <h3>CoreLife Eatery</h3>
+                <p></p>
+                <a href="https://locations.corelifeeatery.com/corelife-eatery-331bcc0ec69e" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/cafe.jpg" alt="">
+            <div class="content">
+                <h3>Seventh Street Cafe</h3>
+                <p></p>
+                <a href="https://seventhstreetcafe.com/" target="_blank" class="btn">More Info</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
 </section>
 
 <!-- scroll top button  -->
-<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+<a href="#submit" class="fas fa-angle-up" id="scroll-top"></a>
 
 <!-- loader  -->
 <div class="loader-container">
