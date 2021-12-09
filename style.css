@@ -712,10 +712,6 @@ input{
 	transform: rotate(315deg);
 }
 
-.container .nine{
-	background-color: #ff3838;
-	transform: rotate(315deg);
-}
 .arrow{
 	position: absolute;
 	top:10%;
