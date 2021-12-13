@@ -714,8 +714,8 @@ input{
 
 .arrow{
 	position: absolute;
-	top:10%;
-	left:50%;
+	top:40%;
+  	left:630px;
 	transform: translateX(-50%);
 	color:#000;
 }
