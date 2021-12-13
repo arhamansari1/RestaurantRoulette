@@ -715,14 +715,14 @@ input{
 .arrow{
 	position: absolute;
 	top:40%;
-  	left:630px;
+        left:450px;
 	transform: translateX(-50%);
 	color:#000;
 }
 
 .arrow::before{
-	content:"\2193";
-	font-size:90px;
+	content:"\2192";
+	font-size:150px;
 }
 
 #spin{
