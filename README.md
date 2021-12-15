@@ -37,7 +37,7 @@ A website application that facilitates the needs of hungry students at Adelphi U
 - Google Maps back engine to find and filter restaurants
 - create shareable links to send to friends 
 
-## What the website looks like
+## What the website looks like (highlighted pages)
 ### Home
 ![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/home.png)
 
