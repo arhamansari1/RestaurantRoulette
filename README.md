@@ -50,4 +50,4 @@ A website application that facilitate the needs of hungry students at Adelphi Un
 ### Roulette Wheel
 ![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/roulette.png)
 
-
+Enjoy Taco Bell!
