@@ -1,6 +1,6 @@
 # Restaurant Roulette
 
-A website application that facilitate the needs of hungry students at Adelphi University through a randomization generator where students may enter their restaurant choices and the application determines a selection. 
+A website application that facilitates the needs of hungry students at Adelphi University through a randomization generator where students may enter their restaurant choices and the application determines a selection. 
 
 ## How to run the application
 1. Download the aplication and open folder on Visual Studio Code
