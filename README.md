@@ -6,10 +6,9 @@ A website application that facilitates the needs of hungry students at Adelphi U
 1. Download the aplication and open folder on Visual Studio Code
 2. 
 
-## How to submit choices
+## How to start a roulette session
 1. Select to use as guest or register to make an account. 
-2. Select restaurant choices
-3. Submit choices 
+2. Submit restaurant choices
 4. Wait for randomization 
 
 ## User Stories 
