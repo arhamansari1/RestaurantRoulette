@@ -16,6 +16,7 @@ A website application that facilitates the needs of hungry students at Adelphi U
 - A user can create an account
 - A user can create a private room via a number
 - A user can submit 2 choices
+- A user can view popular options to help input choices (links to restaurant's website)
 - A user with an account can be a "host" and interact with roulette wheel
 
 ## Features 
