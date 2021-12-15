@@ -38,3 +38,5 @@ A website application that facilitate the needs of hungry students at Adelphi Un
 - create shareable links to send to friends 
 
 ## What the website looks like
+![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/home.png)
+
