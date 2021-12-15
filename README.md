@@ -38,5 +38,16 @@ A website application that facilitate the needs of hungry students at Adelphi Un
 - create shareable links to send to friends 
 
 ## What the website looks like
+### Home
 ![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/home.png)
+
+### Registration
+![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/register.png)
+
+### Submit 
+![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/submit.png)
+
+### Roulette Wheel
+![alt_text](https://github.com/arhamansari1/RestaurantRoulette/blob/main/screenshots/roulette.png)
+
 
