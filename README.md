@@ -2,23 +2,23 @@
 
 A website application that facilitate the needs of hungry students at Adelphi University through a randomization generator where students may enter their restaurant choices and the application determines a selection. 
 
-##How to run the application
+## How to run the application
 1. Download the aplication and open folder on Visual Studio Code
 2. 
 
-##How to submit choices
+## How to submit choices
 1. Select to use as guest or register to make an account. 
 2. Select restaurant choices
 3. Submit choices 
 4. Wait for randomization 
 
-##User Stories 
+## User Stories 
 - A user can create an account
 - A user can create a private room via a number
 - A user can submit 2 choices
 - A user with an account can be a "host" and interact with roulette wheel
 
-##Features 
+## Features 
 - Accounts
     - create a username and password which is stored in backend
     - users are allowed to host a room
@@ -31,10 +31,10 @@ A website application that facilitate the needs of hungry students at Adelphi Un
     - users with accounts are allowed in the roulette room to spin the wheel
     - randomly selects a restaurant and gets viewed by everyone in the room (excepts for those who are guests)
 
-##Future Features
+## Future Features
 - an unlimited amount of choices can populate the wheel (resizable roulette wheel)
 - filter restaurant options based on user-input on cuisine, price range, location, reviews, etc. 
 - Google Maps back engine to find and filter restaurants
 - create shareable links to send to friends 
 
-##What the website looks like
+## What the website looks like
