@@ -6,7 +6,7 @@ A website application that facilitates the needs of hungry students at Adelphi U
 1. Download the application, move all files including pictures to a folder, and open the folder on Visual Studio Code
 2. Download all the dependencies through the terminal. Use the npm -i command to do so.
 3. Use attached file to create the schema for MySQL Workbench
-4. In the terminal, type "node server11.js"(or whatever you name the server file) 
+4. In the terminal, type 'node server11.js'(or whatever you name the server file) 
 5. The terminal will dislpay that the app is on port 5000. The app will be served on http://localhost:5000/
 6. Go to http://localhost:5000/ in your browser
 
