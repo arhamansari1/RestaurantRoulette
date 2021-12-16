@@ -7,7 +7,7 @@ const fs = require('fs');
 const http = require('http');
 const session = require('express-session');
 const path = require('path'); 
-//const route = require('./routes');
+
 
 //creates the app/server
 const app = express();
@@ -27,6 +27,8 @@ connection.connect((err) => {
         console.log("connected!")
     }
 })
+
+
 //some queries I passed in order to make tables/test functions
 //connection.query('CREATE TABLE tabletest(id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, thing VARCHAR(255) NOT NULL)', (err, rows) =>{
 //    if(err){
@@ -60,6 +62,7 @@ app.use(session({
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
+app.set('view engine', 'ejs');
 
 app.post('/auth', function(request, response) {
 	var username = request.body.username;
@@ -69,9 +72,10 @@ app.post('/auth', function(request, response) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('/home');
+                response.redirect('/home');
 			} else {
-				response.send('Incorrect Username and/or Password!');
+				//response.send('Incorrect Username and/or Password!');
+                response.redirect('/login.html');
 			}			
 			response.end();
 		});
@@ -83,9 +87,11 @@ app.post('/auth', function(request, response) {
 //tests whether the user logged in successfully
 app.get('/home', function(request, response) {
 	if (request.session.loggedin) {
-		response.send('Welcome back, ' + request.session.username + '!');
+		//response.send('Welcome back, ' + request.session.username + '!');
+        response.redirect('/index2.html');
 	} else {
 		response.send('Please login to view this page!');
+        
 	}
 	response.end();
 });
@@ -123,33 +129,67 @@ app
 
     .get('/roulette.html',  (req, res) =>{
         res.sendFile(__dirname+'/roulette.html')
+        
         })
 
     .get('/index.html',  (req, res) =>{
         res.sendFile(__dirname+'/index.html')
         })
         
-    
+        
     //post functions add information into the database
-    .post('/api/user', (req, res) => {
+.post('/message', (req, res) =>{
+    const room = req.body.room_id;
+    const c1 = req.body.choice1;
+    const c2 = req.body.choice2;
     
-        res.json(req.body);
-        const un = req.body.username;
-        const pw = req.body.password;
+    connection.query("INSERT INTO res_choices (room_id, choice1, choice2) VALUES ("+room+", '"+c1+"', '"+c2+"');", (err, rows) =>{
+        if(err){
+            throw err
+        } else {
+            console.log("Data has been sent!")
+            console.log(rows)
+        }
+        })
 
-        connection.query("INSERT INTO test_users (username, password, resturant_last_id) VALUES ('"+un+"', '"+pw+"', 7);", (err, rows) =>{
-    if(err){
-        throw err
-    } else {
-        console.log("Data has been sent!")
-        console.log(rows)
+    res.redirect('/message.html');
+
+})
+
+
+.post('/choices', (req, res) =>{
+    
+    const room = req.body.room_id;
+    const c1 = req.body.choice1;
+    const c2 = req.body.choice2;
+    
+    connection.query("INSERT INTO res_choices (room_id, choice1, choice2) VALUES ("+room+", '"+c1+"', '"+c2+"');", (err, rows) =>{
+        if(err){
+            throw err
+        } else {
+            console.log("Data has been sent!")
+            console.log(rows)
+        }
+        })
+
+
+    var sql='SELECT * FROM res_choices WHERE room_id = ?';
+        connection.query(sql,[room] , function (err, data, fields) {
+        if (err) throw err;
+        else{
+            
+            var row;
+             
+                row = data;
+                console.log(row.length);
+                
+    
+        res.render('roulette', { title: 'User List', userData: row});
     }
-})
+      });
 })
 
-.post('/api/register', (req, res) => {
-    
-    res.json(req.body);
+.post('/reg', (req, res) => {    
     
     const first = req.body.firstname;
     const last = req.body.lastname;
@@ -159,7 +199,8 @@ app
     const pw = req.body.pass;
 
 
-    connection.query("INSERT INTO users (first_name, last_name, user_email, user_phone, username, password) VALUES ('"+first+"', '"+last+"', '"+email+"','"+number+"', '"+un+"', '"+pw+"' );", (err, rows) =>{
+    connection.query("INSERT INTO users (first_name, last_name, user_email, user_phone, username, password) \
+    VALUES ('"+first+"', '"+last+"', '"+email+"','"+number+"', '"+un+"', '"+pw+"' );", (err, rows) =>{
 if(err){
     throw err
 } else {
@@ -167,7 +208,13 @@ if(err){
     console.log(rows)
 }
 })
+res.redirect('/login.html');
 })
+
+
+
+
+
 
 app.listen(port);
 

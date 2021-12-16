@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Roulette </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+ <body id="wheel">
+     
+<!-- header section starts  -->
+
+<header>
+
+    <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Restaurant Roulette</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="index2.html">home</a>
+
+    </nav>
+
+</header>
+<!-- header section ends -->
+
+
+<% if(userData.length == 1){ %>
+<button id="spin">Start Roulette</button>
+<span class="arrow"></span>
+<div class="container">
+
+
+<div class="one"><%=  userData[0].choice1  %></div>
+<div class="two"><%=  userData[0].choice2  %></div>
+<div class="three"><%=  userData[0].choice1  %></div>
+<div class="four"><%=  userData[0].choice2  %></div>
+<div class="five"><%=  userData[0].choice1  %></div>
+<div class="six"><%=  userData[0].choice2  %></div>
+<div class="seven"><%=  userData[0].choice1  %></div>
+<div class="eight"><%=  userData[0].choice2  %></div>
+
+</div>
+</section>
+<% } %>
+
+<% if(userData.length == 2){ %>
+    <button id="spin">Start Roulette</button>
+    <span class="arrow"></span>
+    <div class="container">
+    
+    
+    <div class="one"><%=  userData[0].choice1  %></div>
+    <div class="two"><%=  userData[0].choice2  %></div>
+    <div class="three"><%= userData[1].choice1   %></div>
+    <div class="four"><%=  userData[1].choice2  %></div>
+    <div class="five"><%=  userData[0].choice1  %></div>
+    <div class="six"><%=  userData[0].choice2  %></div>
+    <div class="seven"><%= userData[1].choice1   %></div>
+    <div class="eight"><%= userData[1].choice2   %></div>
+    
+    
+    </div>
+    </section>
+    <% } %>
+
+    <% if(userData.length == 3){ %>
+        <button id="spin">Start Roulette</button>
+        <span class="arrow"></span>
+        <div class="container">
+        
+        
+        <div class="one"><%=  userData[0].choice1  %></div>
+        <div class="two"><%=  userData[0].choice2  %></div>
+        <div class="three"><%=  userData[1].choice1  %></div>
+        <div class="four"><%=  userData[1].choice2  %></div>
+        <div class="five"><%=  userData[2].choice1  %></div>
+        <div class="six"><%=  userData[2].choice2  %></div>
+        <div class="seven"><%=  userData[0].choice1  %></div>
+        <div class="eight"><%=  userData[1].choice2  %></div>
+        
+        </div>
+        </section>
+        <% } %>
+
+
+        <% if(userData.length == 4){ %>
+            <button id="spin">Start Roulette</button>
+            <span class="arrow"></span>
+            <div class="container">
+            
+            
+            <div class="one"><%=  userData[0].choice1  %></div>
+            <div class="two"><%=  userData[0].choice2  %></div>
+            <div class="three"><%=  userData[1].choice1  %></div>
+            <div class="four"><%=  userData[1].choice2  %></div>
+            <div class="five"><%=  userData[2].choice1  %></div>
+            <div class="six"><%=  userData[2].choice2  %></div>
+            <div class="seven"><%=  userData[3].choice1  %></div>
+            <div class="eight"><%=  userData[3].choice2  %></div>
+            
+            </div>
+            </section>
+            <% } %>
+    
+<!-- scroll top button  -->
+<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- loader  -->
+<div class="loader-container">
+    <img src="images/loader.gif" alt="">
+</div>
+
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>
