@@ -32,7 +32,6 @@
 </header>
 
 <!-- header section ends -->
-
 <!-- login section starts  -->
 
 <section class="login" id="login">
@@ -46,16 +45,17 @@
             <img src="images/loader.gif" alt="">
         </div>
 
-        <form action="">
+        <form action="auth" method="POST">
 
             <div class="inputBox">
-                <input type="text" placeholder="username">
-                <input type="text" placeholder="password">
+                <input name = "username" type="text" placeholder="username">
+                <input name = "password" type="text" placeholder="password">
             </div>
 
-			
-            <!-- SOURCE ATTRIBUTION: https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link (used to research how to have a button link to another page) -->
-            <input type="button" onclick="location.href='submitUsers.html'" value="login" class="btn">
+
+            <!-- <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea> -->
+
+            <input type="submit" value="login" class="btn">
 
         </form>
 
@@ -64,6 +64,7 @@
 </section>
 
 <!-- login section ends -->
+
 
 </section>
 
@@ -82,7 +83,6 @@
 
 </body>
 </html>
-
 
 
 
