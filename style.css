@@ -201,6 +201,59 @@ header .navbar a:hover{
 }
 /* steps ends */
 
+
+/* gallery starts */
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  height:25rem;
+  flex:1 1 30rem;
+  border:1rem solid #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .box-container .box img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  background:rgba(255,255,255,.9);
+  padding:2rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:#333;
+}
+
+.gallery .box-container .box .content p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+/* gallery ends */
+
+
 /* guest starts */
 .guest .row{
   padding:2rem;
@@ -378,6 +431,88 @@ header .navbar a:hover{
 }
 /* login ends */
 
+
+/* submit starts */
+.submit .row{
+  padding:2rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  background:#fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  border-radius: .5rem;
+}
+
+.submit .row .image{
+  flex:1 1 30rem;
+}
+
+.submit .row .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.submit .row form{
+  flex:1 1 50rem;
+  padding:1rem;
+}
+
+.submit .row form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.submit .row form .inputBox input, .login .row form textarea{
+  padding:1rem;
+  margin:1rem 0;
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  width:49%;
+}
+
+.submit .row form textarea{
+  width:100%;
+  resize: none;
+  height:15rem;
+}
+
+.submit .row form .btn{
+  background:none;
+}
+
+.submit .row form .btn:hover{
+  background:var(--red);
+}
+
+/* choice selection starts */
+.parent {
+  padding: 2em;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  padding: 2em 0;
+  border-bottom: 2px dashed rgba(255,255,255, 0.2);
+}
+
+input{
+  padding: 0.7em 1em;
+  border-radius: 4px;
+  border: none;
+  width: 360px;
+}
+/* choice selection ends */
+
+/* submit ends */
+
+
 /* footer starts */
 .footer{
   background:#000;
@@ -401,7 +536,7 @@ header .navbar a:hover{
 .footer .credit span{
   color:var(--red);
 }
-/* footer endss */
+/* footer ends */
 
 #scroll-top{
   position: fixed;
@@ -420,6 +555,8 @@ header .navbar a:hover{
   top:calc(100% - 12rem)
 }
 
+/* pizza loader starts */
+
 .loader-container{
   position: fixed;
   top:0; left:0;
@@ -435,6 +572,7 @@ header .navbar a:hover{
 .loader-container.fade-out{
   top:-120%;
 }
+/* pizza loader starts */
 
 
 /* media queries  */
@@ -515,9 +653,9 @@ header .navbar a:hover{
 .container{
 	width:500px;
 	height:500px;
-	background-color: #ccc;
+	background-color: #c97425;
 	border-radius:50%;
-	border:15px solid #dde;
+	border:15px solid #df8134;
 	position: relative;
 	overflow: hidden;
 	transition: 5s;
@@ -534,7 +672,7 @@ header .navbar a:hover{
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	font-size:20px;
+	font-size:13px;
 	font-weight:bold;
 	font-family:sans-serif;
 	color:#fff;
@@ -542,49 +680,49 @@ header .navbar a:hover{
 }
 
 .container .one{
-	background-color: #3f51b5;
+	background-color: #ffaf38;
 	left:50%;
 }
 .container .two{
-	background-color: #ff9800;
+	background-color: #ff3838;
 	transform: rotate(45deg);
 }
 .container .three{
-	background-color: #e91e63;
+	background-color: #ffaf38;
 	transform:rotate(90deg);
 }
 .container .four{
-	background-color: #4caf50;
+	background-color: #ff3838;
 	transform: rotate(135deg);
 }
 .container .five{
-	background-color: #009688;
+	background-color: #ffaf38;
 	transform: rotate(180deg);
 }
 .container .six{
-	background-color: #795548;
+	background-color: #ff3838;
 	transform: rotate(225deg);
 }
 .container .seven{
-	background-color: #9c27b0;
+	background-color: #ffaf38;
 	transform: rotate(270deg);
 }
 .container .eight{
-	background-color: #f44336;
+	background-color: #ff3838;
 	transform: rotate(315deg);
 }
 
 .arrow{
 	position: absolute;
-	top:10%;
-	left:50%;
+	top:35%;
+        left:350px;
 	transform: translateX(-50%);
 	color:#000;
 }
 
 .arrow::before{
-	content:"\2193";
-	font-size:90px;
+	content:"\2192";
+	font-size:150px;
 }
 
 #spin{
